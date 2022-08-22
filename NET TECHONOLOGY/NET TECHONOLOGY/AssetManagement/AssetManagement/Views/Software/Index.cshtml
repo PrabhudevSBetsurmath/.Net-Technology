@@ -1,0 +1,27 @@
+<h1>List of all Softwares</h1>
+@Html.ValidationSummary(true)
+<table class="table">
+    <thead>
+        <tr>
+            <th> Serial Number</th>
+            <th> Name</th>
+            <th> Date Of Publish </th>
+            <th>Date Of Expiry</th>
+            <th> Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var software in AssetManagement.Controllers.SoftwareController.SoftwareList)
+        {
+            <tr>
+                <td>@software.id</td>
+                <td>@software.name</td>
+                <td>@software.dateOfPublish.ToString("dd/MM/yyyy")</td>
+                <td>@software.dateOfExpiry.ToString("dd/MM/yyyy")</td>
+                <td>@software.price</td>
+                <td>@Html.ActionLink("Update", "UpdateSoftware", new { id = software.id })</td>
+            </tr>
+        }
+    <tfoot></tfoot>
+    </tbody>
+</table>

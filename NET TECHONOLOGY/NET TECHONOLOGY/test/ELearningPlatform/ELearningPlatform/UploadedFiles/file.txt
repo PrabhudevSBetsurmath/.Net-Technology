@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace projecct
+{
+   class BookAsset
+    {
+            Console.WriteLine("1 Add an asset");
+            Console.WriteLine("2 Search an asset");
+            Console.WriteLine("3 Update an asset");
+            Console.WriteLine("4 Delete an asset");
+            Console.WriteLine("5 List of all available assets");
+            Console.WriteLine("6 Exit");
+            Console.WriteLine("####################################################");
+            Console.WriteLine("ENTER YOUR CHOICE:");
+            int A = int.Parse(Console.ReadLine());
+            if(A==1)
+            {
+
+            }
+            else if(A==2)
+            {
+
+            }
+            else if (A == 3)
+            {
+
+            }
+            else if (A == 4)
+            {
+
+            }
+            else if (A == 5)
+            {
+                Console.WriteLine("ENTER YOUR ASSET TYPE: ");
+                string at = Console.ReadLine();
+                if(at=="book")
+                 {
+                    Console.WriteLine("ENTER THE NAME OF THE BOOK: ");
+                    string bn = Console.ReadLine();
+        Console.WriteLine("ENTER THE AUTHOR OF THE BOOK: ");
+                    string ba = Console.ReadLine();
+        Console.WriteLine("ENTER THE DATE IN DD-MM-YYYY: ");
+                    string dop = Console.ReadLine();
+    }
+                if (at == "SoftwareLicense")
+                {
+                    Console.WriteLine("ENTER THE NAME OF THE BOOK: ");
+                    string bn = Console.ReadLine();
+    Console.WriteLine("ENTER THE AUTHOR OF THE BOOK: ");
+                    string ba = Console.ReadLine();
+    Console.WriteLine("ENTER THE DATE IN DD-MM-YYYY: ");
+                    string dop = Console.ReadLine();
+}
+if (at == "Hardware")
+{
+    Console.WriteLine("ENTER THE NAME OF THE BOOK: ");
+    string bn = Console.ReadLine();
+    Console.WriteLine("ENTER THE AUTHOR OF THE BOOK: ");
+    string ba = Console.ReadLine();
+    Console.WriteLine("ENTER THE DATE IN DD-MM-YYYY: ");
+    string dop = Console.ReadLine();
+}
+
+
+
+            }
+            else
+{
+    Console.WriteLine("YOUR HAVE ENTER THE WRONG CHOICE");
+}
+Console.ReadLine();
+    }
+}

@@ -1,0 +1,28 @@
+﻿<h1>List of all hardwares</h1>
+@Html.ValidationSummary(true)
+<table class="table">
+    <thead>
+        <tr>
+            <th> Serial Number </th>
+            <th> Name</th>
+            <th> Brand</th>
+            <th> Installation date</th>
+            <th> Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var hardware in  AssetManagement.Controllers.HardwareController.HardwareList)
+        {
+            <tr>
+                <td>@hardware.id</td>
+                <td>@hardware.name</td>
+                <td>@hardware.brand</td>
+                <td>@hardware.installationDate.ToString("dd/MM/yyyy")</td>
+                <td>@hardware.amount</td>
+                <td>@Html.ActionLink("Update", "UpdateHardware", new { id = hardware.id })</td>
+            </tr>
+        }
+    <tfoot></tfoot>
+    </tbody>
+</table>
+

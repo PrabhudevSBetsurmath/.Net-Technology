@@ -1,0 +1,16 @@
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\WorldMap.exe
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\WorldMap.deps.json
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\WorldMap.runtimeconfig.json
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\WorldMap.runtimeconfig.dev.json
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\WorldMap.dll
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\ref\WorldMap.dll
+D:\submission\WorldMap\WorldMap\bin\Debug\net5.0\WorldMap.pdb
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.csproj.AssemblyReference.cache
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.GeneratedMSBuildEditorConfig.editorconfig
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.AssemblyInfoInputs.cache
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.AssemblyInfo.cs
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.csproj.CoreCompileInputs.cache
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.dll
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\ref\WorldMap.dll
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.pdb
+D:\submission\WorldMap\WorldMap\obj\Debug\net5.0\WorldMap.genruntimeconfig.cache

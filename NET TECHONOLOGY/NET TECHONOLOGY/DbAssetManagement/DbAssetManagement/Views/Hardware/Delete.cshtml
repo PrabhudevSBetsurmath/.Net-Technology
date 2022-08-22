@@ -1,0 +1,42 @@
+﻿@model DbAssetManagement.Models.Hardware
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Haradware</h4>
+    <form asp-action="Delete">
+
+        <div class="form-group">
+            <label asp-for="SerialNo" class="control-label"></label>
+            <input asp-for="SerialNo" class="form-control"readonly />
+            <span asp-validation-for="SerialNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="HardwareName" class="control-label"></label>
+            <input asp-for="HardwareName" class="form-control"readonly />
+            <span asp-validation-for="HardwareName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Brand" class="control-label"></label>
+            <input asp-for="Brand" class="form-control"readonly />
+            <span asp-validation-for="Brand" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="InstallationDate" class="control-label"></label>
+            <input asp-for="InstallationDate" class="form-control" readonly/>
+            <span asp-validation-for="InstallationDate" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Amount" class="control-label"></label>
+            <input asp-for="Amount" class="form-control" readonly/>
+            <span asp-validation-for="Amount" class="text-danger"></span>
+        </div>
+        <input type="submit" value="ConfirmDelete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

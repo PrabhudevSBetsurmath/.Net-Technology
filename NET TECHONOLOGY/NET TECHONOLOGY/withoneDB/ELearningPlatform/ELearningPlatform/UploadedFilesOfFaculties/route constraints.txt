@@ -1,0 +1,11 @@
+ [Route("{EmployeeId:int}")]
+[Route("{EmployeeId:int:min(1000)}")]
+[Route("{EmployeeName:alpha}")]
+[Route("{EmployeeId:int:max(1000)}")]
+[Route("{EmployeeId:int:min(100):max(1000)}")]
+[Route("{EmployeeId:int:range(100,1000)}")]
+[Route("{EmployeeName:alpha:minlength(5)}")]
+[Route("{EmployeeName:alpha:maxlength(10)}")]
+[Route("{EmployeeName:alpha:minlength(5):maxlength(10)}")]
+[Route("{EmployeeName:alpha:length(5)}")]
+[Route("{EmployeeName:regex(a(b|c))}")] :Regex Route Constraint in ASP.NET Core Web API

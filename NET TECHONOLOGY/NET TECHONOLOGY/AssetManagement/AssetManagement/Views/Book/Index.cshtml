@@ -1,0 +1,27 @@
+<h1>List of all Books</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Serial Number</th>
+            <th> Name</th>
+            <th> Author</th>
+            <th> Edition</th>
+            <th> Date Of Publish</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var book in AssetManagement.Controllers.BookController.BookList)
+        {
+            <tr>
+                <td>@book.id</td>
+                <td>@book.name</td>
+                <td>@book.author</td>
+                <td>@book.edition</td>
+                <td>@book.dateOfPublish.ToString("dd/MM/yyyy")</td>
+                <td>@Html.ActionLink("Update", "UpdateBook", new { id = book.id })</td>
+            </tr>
+        }
+    <tfoot></tfoot>
+    </tbody>
+</table>
+

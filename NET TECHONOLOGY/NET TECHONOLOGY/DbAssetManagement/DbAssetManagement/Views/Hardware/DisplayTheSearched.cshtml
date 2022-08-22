@@ -1,0 +1,34 @@
+﻿@model IEnumerable<DbAssetManagement.Controllers.HardwareController>
+@{
+    ViewBag.Title = "hardwareAsset";
+    dynamic hardwareAsset = ViewBag.hardwareAsset;
+
+}
+
+<h1>List of Hardwares</h1>
+@Html.ValidationSummary(true)
+<table class="table">
+    <thead>
+        <tr>
+            <th> Serial No</th>
+            <th> HardwareName</th>
+            <th> Brand</th>
+            <th> Date Of Publish</th>
+            <th> Amount</th>
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr>
+            <td>@hardwareAsset.SerialNo</td>
+            <td>@hardwareAsset.HardwareName</td>
+            <td>@hardwareAsset.Brand</td>
+            <td>@hardwareAsset.InstallationDate.ToString("dd/MM/yyyy")</td>
+            <td>@hardwareAsset.Amount</td>
+        </tr>
+
+    <tfoot></tfoot>
+    </tbody>
+</table>
+

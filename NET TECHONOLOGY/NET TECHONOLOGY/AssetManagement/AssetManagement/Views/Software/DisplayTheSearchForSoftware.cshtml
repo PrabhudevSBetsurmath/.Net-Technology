@@ -1,0 +1,34 @@
+﻿@model IEnumerable<AssetManagement.Controllers.SoftwareController>
+@{
+    ViewBag.Title = "SoftwareAsset";
+   dynamic softwareAsset = ViewBag.softwareAsset;
+
+}
+
+<h1>List Of SoftwareLicense</h1>
+<table class="table">
+    <thead>
+        <tr>
+            <th> Asset Id</th>
+            <th> Name</th>
+            <th> Date Of Publish</th>
+            <th> Date Of Expiry</th>
+            <th> Price</th>
+
+        </tr>
+    </thead>
+    <tbody>
+
+
+        <tr>
+            <td>@softwareAsset.id</td>
+            <td>@softwareAsset.name</td>
+            <td>@softwareAsset.dateOfPublish.ToString("dd/MM/yyyy")</td>
+            <td>@softwareAsset.dateOfExpiry.ToString("dd/MM/yyyy")</td>
+            <td>@softwareAsset.price</td>
+        </tr>
+
+    <tfoot></tfoot>
+    </tbody>
+</table>
+

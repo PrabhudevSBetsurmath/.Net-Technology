@@ -1,0 +1,37 @@
+Small
+-->The first rule of functions is that they should be small. The second rule of functions is that
+they should be smaller than that.
+
+Blocks and Indenting
+-->statement under if else while should not be more than one line and that line should be a fuction call so that you can read properly.
+
+Do One Thing
+-->FUNCTIONS SHOULD DO ONE THING. THEY SHOULD DO IT WELL. THEY SHOULD DO IT ONLY.
+
+One Level of Abstraction per Function
+-->once details are mixed with essential concepts, more and more details tend to accrete within the function.
+
+Reading Code from Top to Bottom: The Stepdown Rule
+--> code should feel like naration top to bottom. single levbel of abstraction.
+
+switch statement
+-->switch statement does N things and cant be minimized so we should use polimorphism.	hide switch statement inside a abstract factory/hide behind inheritane.
+
+Use descriptive names
+--> give peoper names to the function, names can be long. use naming convention. Be consistant in your names.use proper noun verbs etc.
+
+Function arguments
+-->use less number of paramters so that user can understand what to pass in the funtion.
+
+common monadic form
+-->
+
+verbs and keywords
+--> good names to be given.
+
+error handling is one thing
+-->error handling function should do only 1 things and shoulf not interfear in other function.
+
+Do not repeat yourself
+--> avoid duplication of code.
+

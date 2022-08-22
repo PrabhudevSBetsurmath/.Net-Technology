@@ -1,0 +1,8 @@
+D:\FactoryPatternAssignment\FactoryPatternAssignment\bin\Debug\FactoryPatternAssignment.exe.config
+D:\FactoryPatternAssignment\FactoryPatternAssignment\bin\Debug\FactoryPatternAssignment.exe
+D:\FactoryPatternAssignment\FactoryPatternAssignment\bin\Debug\FactoryPatternAssignment.pdb
+D:\FactoryPatternAssignment\FactoryPatternAssignment\obj\Debug\FactoryPatternAssignment.csproj.AssemblyReference.cache
+D:\FactoryPatternAssignment\FactoryPatternAssignment\obj\Debug\FactoryPatternAssignment.csproj.SuggestedBindingRedirects.cache
+D:\FactoryPatternAssignment\FactoryPatternAssignment\obj\Debug\FactoryPatternAssignment.csproj.CoreCompileInputs.cache
+D:\FactoryPatternAssignment\FactoryPatternAssignment\obj\Debug\FactoryPatternAssignment.exe
+D:\FactoryPatternAssignment\FactoryPatternAssignment\obj\Debug\FactoryPatternAssignment.pdb

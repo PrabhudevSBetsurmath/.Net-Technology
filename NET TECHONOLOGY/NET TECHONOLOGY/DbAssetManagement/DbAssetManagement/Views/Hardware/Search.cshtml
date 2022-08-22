@@ -1,0 +1,17 @@
+﻿@model DbAssetManagement.Models.Hardware
+<h1>SearchHardware</h1>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.SerialNo)
+        </div>
+        <div class="editor-label">
+            @Html.EditorFor(model => model.SerialNo)
+            @Html.ValidationMessageFor(model => model.SerialNo, "", new { @class = "text-danger" })
+        </div>
+        <br />
+        <input type="submit" class="btn btn-primary" value="Search" />
+    </fieldset>
+}

@@ -1,0 +1,876 @@
+using System;
+using System.Collections.Generic;
+
+
+namespace LandC_assignment
+{
+    class Program
+    {
+
+        static void Main()
+        {
+            var countries = new Dictionary<string, string>() {
+            {
+               "abkhazia",
+               "Georgia Russia Turkey (M)"
+            },
+            {
+               "adelie land (france) ade",
+               "Australian Antarctic Territory (Australia)"
+            },
+            {
+               "afghanistan",
+               "China (L) Iran (L) Pakistan (L) Tajikistan (L) Turkmenistan (L) Uzbekistan (L)"
+            },
+            {
+               "akrotiri and dhekelia (united kingdom)",
+               "Cyprus  United Nations Buffer Zone in Cyprus (L)"
+            },
+            {
+               "albania",
+               "Greece Italy (M) Montenegro North Macedonia (L) Kosovo (L),which some countries consider part of Serbia, borders Serbia"
+            },
+            {
+               "algeria",
+               "Italy (M) Libya (L)  Mali (L) Mauritania (L) Morocco Niger (L) Spain (M) Tunisia Western Sahara (L)"
+            },
+            {
+               "american samoa (united states)",
+               "Samoa (M) Tonga (M) Cook Islands (New Zealand) (M) Niue (New Zealand) (M) Tokelau (New Zealand) (M)"
+            },
+            {
+               "andorra",
+               "France (L) Spain (L)"
+            },
+            {
+               "angola",
+               "Democratic Republic of the Congo Republic of the Congo Namibia Zambia (L)"
+            },
+            {
+               "anguilla (united kingdom)",
+               "Antigua and Barbuda (M) British Virgin Islands (United Kingdom) (M) Netherlands (M) Saint Barthélemy (France) (M) Saint Martin (France) (M) United States Virgin Islands (United States) (M)"
+            },
+            {
+               "antigua and barbuda",
+               "France (M) Saint Kitts and Nevis (M) Anguilla (United Kingdom) (M) Montserrat (United Kingdom) (M)  Saint Barthélemy (France) (M)"
+            },
+            {
+               "argentina",
+               "Bolivia (L) Brazil (L) Chile Paraguay (L) Uruguay Falkland Islands (United Kingdom) (M)"
+            },
+            {
+               "argentine antarctica (argentina)",
+               "Chilean Antarctic Territory (Chile) British Antarctic Territory (United Kingdom)"
+            },
+            {
+               "armenia",
+               "Azerbaijan (L) Georgia (L) Iran (L) Turkey (L)"
+            },
+            {
+               "republic of artsakh",
+               "Armenia (L) Azerbaijan (L)"
+            },{
+               "aruba (netherlands)",
+               "Curaçao (Netherlands) (M) Dominican Republic (M) Venezuela (M)"
+            }, {
+               "ashmore and cartier islands (australia)",
+               "Australia (M) East Timor (M) Indonesia (M)"
+            }, {
+               "australia",
+               "East Timor (M) Indonesia (M) New Zealand (M) Papua New Guinea (M) Solomon Islands (M) French Southern and Antarctic Lands (France) (M) New Caledonia (France) (M)"
+            }, {
+               "australia (excluding outlying islands)",
+               "Ashmore and Cartier Islands (Australia) (M) Coral Sea Islands (Australia) (M) East Timor (M) Indonesia (M) New Zealand (M) Papua New Guinea (M)"
+            }, {
+               "australian antarctic territory (australia)",
+               "Adélie Land (France) Queen Maud Land (Norway) Ross Dependency (New Zealand)"
+            }, {
+               "austria",
+               "Czech Republic (L) Germany (L) Hungary (L) Italy (L) Liechtenstein (L) Slovakia (L) Slovenia (L) Switzerland (L)"
+            }, {
+               "azerbaijan",
+               "Armenia (L) Georgia (L) Iran Kazakhstan (M) Russia Turkey (L) Turkmenistan (M)"
+            }, {
+               "bahamas",
+               "Cuba (M) Haiti (M) United States (M) Turks and Caicos Islands (United Kingdom) (M)"
+            }, {
+               "bahrain",
+               "Iran (M) Qatar (M) Saudi Arabia (M)"
+            }, {
+               "baker island (united states)",
+               "Howland Island (United States) (M) Kiribati (M)"
+            }, {
+               "bangladesh",
+               "Myanmar India"
+            }, {
+               "barbados",
+               "France (M) Guyana (M) Saint Lucia (M) Saint Vincent and the Grenadines (M) Trinidad and Tobago (M) Venezuela (M)"
+            }, {
+               "belarus",
+               "Latvia (L) Lithuania (L) Poland (L) Russia (L) Ukraine (L)"
+            }, {
+               "belgium",
+               "France Germany (L) Luxembourg (L) Netherlands United Kingdom (M)"
+            }, {
+               "belize",
+               "Guatemala Honduras (M) Mexico"
+            }, {
+               "benin",
+               "Burkina Faso (L) Niger (L) Nigeria Togo"
+            }, {
+               "bermuda (united kingdom)",
+               "None"
+            }, {
+               "bhutan",
+               "China (L) India (L)"
+            }, {
+               "bolivia",
+               "Argentina (L) Brazil (L) Chile (L) Paraguay (L) Peru (L)"
+            }, {
+               "bosnia and herzegovina",
+               "Croatia Montenegro (L) Serbia (L)"
+            }, {
+               "botswana",
+               "Namibia (L) South Africa (L)  Zambia (L) Zimbabwe (L)"
+            }, {
+               "bouvet island (norway)",
+               "None"
+            }, {
+               "brazil",
+               "Argentina (L) Bolivia (L) Colombia (L) France Guyana (L) Paraguay (L) Peru (L) Suriname (L) Uruguay Venezuela (L)"
+            }, {
+               "british antarctic territory (united kingdom)",
+               "Chilean Antarctic Territory (Chile) Argentine Antarctica (Argentina) Queen Maud Land (Norway)"
+            }, {
+               "british indian ocean territory (united kingdom)",
+               "Maldives (M)"
+            }, {
+               "british virgin islands (united kingdom)",
+               "Anguilla (United Kingdom) (M) Puerto Rico (United States) (M) United States Virgin Islands (United States) (M)"
+            }, {
+               "brunei",
+               "China (M) Malaysia Philippines (M) Taiwan (M) Vietnam (M)"
+            }, {
+               "bulgaria",
+               "Greece (L)  North Macedonia (L) Romania Serbia (L) Turkey Russia (M) Ukraine (M)"
+            }, {
+               "burkina faso",
+               "Benin (L)  Côte d'Ivoire (L) Ghana (L) Mali (L) Niger (L) Togo (L)"
+            }, {
+               "burundi",
+               "Democratic Republic of the Congo (L) Rwanda (L) Tanzania (L)"
+            }, {
+               "cambodia",
+               "Laos (L) Thailand Vietnam"
+            }, {
+               "cameroon",
+               "Central African Republic (L) Chad (L) Republic of the Congo (L) Equatorial Guinea Gabon (L) Nigeria"
+            }, {
+               "canada",
+               "United States Greenland (Denmark) (M) Saint Pierre and Miquelon (France) (M)"
+            }, {
+               "cape verde",
+               "The Gambia (M) Mauritania (M) Senegal (M)"
+            }, {
+               "cayman islands (united kingdom)",
+               "Cuba (M) Honduras (M)  Jamaica (M)"
+            }, {
+               "central african republic",
+               "Cameroon (L) Chad (L) Democratic Republic of the Congo (L) Republic of the Congo (L) South Sudan (L) Sudan (L)"
+            }, {
+               "chad",
+               "Cameroon (L) Central African Republic (L) Libya (L) Niger (L) Nigeria (L) Sudan (L)"
+            }, {
+               "chile",
+               "Argentina Bolivia (L) Peru"
+            }, {
+               "chilean antarctic territory (chile)",
+               "Argentine Antarctica (Argentina) British Antarctic Territory (United Kingdom) Peter I Island (Norway) (M)"
+            }, {
+               "people's republic of china(excluding the special administrative regions of hong kong and macau, as well as the island country of  taiwan, which is claimed but not administered by the prc)",
+               "Afghanistan (L) Bhutan (L) Brunei (M) India (L) Indonesia (M) Japan (M) Kazakhstan (L) North Korea (L) South Korea (M) Kyrgyzstan (L) Laos (L) Malaysia (M) Mongolia (L) Myanmar (L) Nepal (L) Pakistan (L) Philippines (M) Russia (L) Tajikistan (L) Vietnam (L) Hong Kong  Macau Taiwan (M)"
+            }, {
+               "christmas island (australia)",
+               "Indonesia (M)"
+            }, {
+               "clipperton island (france)",
+               "None"
+            }, {
+               "cocos (keeling) islands (australia)",
+               "None"
+            }, {
+               "colombia",
+               "Brazil (L) Costa Rica (M) Dominican Republic (M) Ecuador Haiti (M) Jamaica (M) Nicaragua (M) Panama Peru (L) Venezuela"
+            }, {
+               "comoros",
+               "France (M) Madagascar (M) Mozambique (M) Seychelles (M) Tanzania (M) French Southern and Antarctic Lands[30] (France) (M)"
+            }, {
+               "democratic republic of the congo",
+               "Angola Burundi (L) Central African Republic (L) Republic of the Congo Rwanda (L) South Sudan (L) Tanzania (L) Uganda (L) Zambia (L)"
+            }, {
+               "republic of the congo",
+               "Angola Cameroon (L) Central African Republic (L) Democratic Republic of the Congo Gabon"
+            }, {
+               "cook islands (new zealand)",
+               "Kiribati (M) American Samoa (United States) (M) French Polynesia (France) (M) Niue (New Zealand) (M) Tokelau (New Zealand) (M)"
+            }, {
+               "coral sea islands (australia)",
+               "Australia (M) New Caledonia (France) (M) Papua New Guinea (M) Solomon Islands (M)"
+            }, {
+               "costa rica",
+               "Colombia (M) Ecuador (M) Nicaragua Panama"
+            }, {
+               "côte d'ivoire",
+               "Burkina Faso (L) Ghana Guinea (L) Liberia Mali (L)"
+            }, {
+               "croatia",
+               "Bosnia and Herzegovina Hungary (L) Italy (M) Montenegro Serbia (L) Slovenia"
+            }, {
+               "cuba",
+               "Bahamas (M) Haiti (M) Honduras (M) Jamaica (M) Mexico (M) United States (M) Cayman Islands (United Kingdom) (M) Navassa Island (United States/Haiti) (M)"
+            }, {
+               "curaçao (netherlands)",
+               "Dominican Republic (M) Netherlands (M) Venezuela (M) Aruba (Netherlands) (M)"
+            }, {
+               "cyprus",
+               "Northern Cyprus Egypt (M) Greece (M) Israel (M) Lebanon (M) Syria (M) Turkey (M) Akrotiri and Dhekelia (United Kingdom)  United Nations Buffer Zone in Cyprus"
+            }, {
+               "northern cyprus",
+               "Cyprus (M) Syria (M) Turkey (M) Akrotiri and Dhekelia (United Kingdom)  United Nations Buffer Zone in Cyprus"
+            }, {
+               "czech republic",
+               "Austria (L) Germany (L) Poland (L) Slovakia (L)"
+            }, {
+               "denmark",
+               "Germany Norway (M) Poland (M) Sweden (M) United Kingdom (M)"
+            }, {
+               "denmark1",
+               "Canada (M) Germany Iceland (M) Norway (M) Poland (M) Sweden (M) United Kingdom (M) Jan Mayen (Norway) (M) Svalbard (Norway) (M)"
+            }, {
+               "djibouti",
+               "Eritrea Ethiopia (L) Somalia Yemen (M) Djibouti borders Somaliland, who is considered by the international community to be part of Somalia"
+            }, {
+               "dominica",
+               "France (M)  Venezuela (M)"
+            }, {
+               "dominican republic",
+               "Colombia (M) Haiti Venezuela (M) Aruba (Netherlands) (M) Curaçao (Netherlands) (M) Puerto Rico (United States) (M) Turks and Caicos Islands (United Kingdom) (M)"
+            }, {
+               "east timor",
+               "Australia (M) Indonesia Ashmore and Cartier Islands (Australia) (M)"
+            }, {
+               "ecuador",
+               "Colombia Costa Rica (M) Peru"
+            }, {
+               "egypt",
+               "Cyprus (M) Greece (M) Israel Jordan (M) Libya Saudi Arabia (M) Sudan Turkey (M) Palestine"
+            }, {
+               "el salvador",
+               "Guatemala Honduras Nicaragua (M)"
+            }, {
+               "equatorial guinea",
+               "Cameroon Gabon Nigeria (M) São Tomé and Príncipe (M)"
+            }, {
+               "eritrea",
+               "Djibouti Saudi Arabia (M) Sudan Ethiopia (L) Yemen (M)"
+            }, {
+               "estonia",
+               "Finland (M) Latvia Russia Sweden (M)"
+            }, {
+               "eswatini (swaziland)",
+               "Mozambique (L) South Africa (L)"
+            }, {
+               "ethiopia",
+               "Djibouti (L) Eritrea (L) Kenya (L) Somalia (L) South Sudan (L) Sudan (L)"
+            }, {
+               "falkland islands (united kingdom)",
+               "Argentina (M)"
+            }, {
+               "faroe islands (denmark)",
+               "Iceland (M) Norway (M) United Kingdom (M)"
+            }, {
+               "fiji",
+               "New Zealand (M) Solomon Islands (M) Tonga (M) Tuvalu (M) Vanuatu (M) New Caledonia (France) (M) Wallis and Futuna (France) (M)"
+            }, {
+               "finland",
+               "Estonia (M) Norway (L) Russia Sweden"
+            }, {
+               "france",
+               "Andorra (L) Antigua and Barbuda (M) Barbados (M) Belgium Brazil Comoros (M) Dominica (M) Germany (L) Italy Luxembourg (L) Madagascar (M) Mauritius (M) Monaco Saint Lucia (M) Spain Switzerland (L) Suriname United Kingdom (M) Venezuela (M) French Southern and Antarctic Lands (France) (M) Guernsey (United Kingdom) (M) Jersey (United Kingdom) (M) Montserrat (United Kingdom) (M)"
+            }, {
+               "france1",
+               "Andorra (L) Antigua and Barbuda (M) Barbados (M) Belgium Brazil Canada (M) Comoros (M) Dominica (M) Fiji (M) Germany (L) Italy Kiribati (M) Luxembourg (L) Madagascar (M) Mauritius (M) Monaco Mozambique (M) Netherlands Saint Kitts and Nevis (M) Saint Lucia (M) Samoa (M) Seychelles (M) Solomon Islands (M) Spain Suriname Switzerland (L) Tonga (M) Tuvalu (M) United Kingdom (M) Vanuatu (M) Venezuela (M) Anguilla (United Kingdom) (M) Cook Islands (New Zealand) (M) Coral Sea Islands (Australia) (M) Guernsey (United Kingdom) (M)  Heard Island and McDonald Islands (Australia) (M) Jersey (United Kingdom) (M) Montserrat (United Kingdom) (M) Sint Maarten (Netherlands) Norfolk Island (Australia) (M) Pitcairn Islands (United Kingdom) (M) Tokelau (New Zealand) (M)"
+            }, {
+               "french polynesia (france)",
+               "Kiribati (M) Cook Islands (New Zealand) (M) Pitcairn Islands (United Kingdom) (M)"
+            }, {
+               "french southern and antarctic lands excluding adélie land (france)",
+               "Comoros (M) France (M) Madagascar (M) Mauritius (M) Mozambique (M) Seychelles (M) Heard Island and McDonald Islands (Australia) (M)"
+            }, {
+               "gabon",
+               "Cameroon (L) Republic of the Congo Equatorial Guinea São Tomé and Príncipe (M)"
+            }, {
+               "the gambia",
+               "Cape Verde (M) Senegal"
+            }, {
+               "georgia",
+               "Armenia (L) Azerbaijan (L) Russia Turkey"
+            }, {
+               "germany",
+               "Austria (L) Belgium (L) Czech Republic (L) Denmark France (L) Luxembourg (L) Netherlands Poland Sweden (M) Switzerland (L) United Kingdom (M)"
+            }, {
+               "ghana",
+               "Burkina Faso (L) Côte d'Ivoire Togo"
+            }, {
+               "gibraltar (united kingdom)",
+               "Spain"
+            }, {
+               "greece",
+               "Albania Bulgaria (L) Cyprus (M) Egypt (M) Italy (M) Libya (M) North Macedonia (L) Turkey"
+            }, {
+               "greenland (denmark)",
+               "Canada (M) Iceland (M) Jan Mayen (Norway) (M) Svalbard (Norway) (M)"
+            }, {
+               "grenada",
+               "Saint Vincent and the Grenadines (M) Trinidad and Tobago (M) Venezuela (M)"
+            }, {
+               "guam (united states)",
+               "Federated States of Micronesia (M) Northern Mariana Islands (United States) (M)"
+            }, {
+               "guatemala",
+               "Belize El Salvador Honduras Mexico"
+            }, {
+               "guernsey (united kingdom)",
+               "France (M) United Kingdom (M) Jersey (United Kingdom) (M)"
+            }, {
+               "guinea",
+               "Côte d'Ivoire (L) Guinea-Bissau Liberia (L) Mali (L) Senegal (L) Sierra Leone"
+            }, {
+               "guinea-bissau",
+               "Guinea Senegal"
+            }, {
+               "guyana",
+               "Barbados (M) Brazil (L) Suriname Trinidad and Tobago (M) Venezuela"
+            }, {
+               "haiti",
+               "Bahamas (M) Colombia (M) Cuba (M) Dominican Republic Jamaica (M) Navassa Island (United States/Haiti) (M) Turks and Caicos Islands (United Kingdom) (M)"
+            }, {
+               "heard island and mcdonald islands (australia)",
+               "French Southern and Antarctic Lands (France) (M)"
+            }, {
+               "honduras",
+               "Belize (M) Cuba (M) El Salvador Guatemala Jamaica (M) Mexico (M) Nicaragua Cayman Islands (United Kingdom) (M)"
+            }, {
+               "hong kong",
+               "China (M) Macau (M)"
+            }, {
+               "howland island[11] (united states)",
+               "Baker Island (United States) (M)"
+            }, {
+               "hungary",
+               "Austria (L) Croatia (L) Romania (L) Serbia (L) Slovakia (L) Slovenia (L) Ukraine (L)"
+            }, {
+               "iceland",
+               "Faroe Islands (Denmark) (M) Greenland (Denmark) (M) Jan Mayen (Norway) (M)"
+            }, {
+               "india",
+               "Bangladesh Bhutan (L) Myanmar China (L) Indonesia (M) Maldives (M) Nepal (L) Pakistan Sri Lanka (M/L)  Thailand (M)"
+            }, {
+               "indonesia",
+               "Australia (M) China (M) East Timor India (M) Malaysia Palau (M) Papua New Guinea Philippines (M) Singapore (M) Taiwan (M) Thailand (M) Vietnam (M) Ashmore and Cartier Islands (Australia) (M) Christmas Island (Australia) (M)"
+            }, {
+               "iran",
+               "Afghanistan (L) Armenia (L) Azerbaijan Bahrain (M) Iraq Kuwait (M) Oman (M) Pakistan Qatar (M) Saudi Arabia (M) Turkey (L) Turkmenistan United Arab Emirates (M)"
+            }, {
+               "iraq",
+               "Iran Jordan (L) Kuwait Saudi Arabia (L) Syria (L) Turkey (L)"
+            }, {
+               "ireland",
+               "United Kingdom"
+            }, {
+               "isle of man (united kingdom)",
+               "United Kingdom"
+            }, {
+               "israel",
+               "Cyprus (M) Egypt Jordan Lebanon Syria (L) Palestine"
+            }, {
+               "italy",
+               "Albania (M) Algeria (M) Austria (L) Croatia (M) France Greece (M) Libya (M) Malta (M) Montenegro (M) San Marino (L) Slovenia Spain (M) Switzerland (L) Tunisia (M) Vatican City (L)"
+            }, {
+               "jamaica",
+               "Colombia (M) Cuba (M) Haiti (M) Honduras (M) Nicaragua (M) Cayman Islands (United Kingdom) (M) Navassa Island (United States/Haiti) (M)"
+            }, {
+               "jan mayen (norway)",
+               "Iceland (M) Greenland (Denmark) (M)"
+            }, {
+               "japan",
+               "China (M) South Korea (M) North Korea (M)   Philippines (M) Russia (M) Northern Mariana Islands (United States) (M) Taiwan (M)"
+            }, {
+               "jarvis island (united states)",
+               "Kiribati (M)"
+            }, {
+               "jersey (united kingdom)",
+               "France (M) Guernsey (United Kingdom) (M)"
+            }, {
+               "johnston atoll (united states)",
+               "None"
+            }, {
+               "jordan",
+               "Egypt (M) Iraq (L) Israel Saudi Arabia Syria (L) Palestine (L)"
+            }, {
+               "kazakhstan",
+               "Azerbaijan (M) China (L) Kyrgyzstan (L) Russia Turkmenistan Uzbekistan (L)"
+            }, {
+               "kenya",
+               "Ethiopia (L) Somalia South Sudan (L) Tanzania Uganda (L)"
+            }, {
+               "kingman reef[11] (united states)",
+               "Kiribati (M) Palmyra Atoll (United States) (M)"
+            }, {
+               "kiribati",
+               "Marshall Islands (M) Nauru (M) Tuvalu (M) Cook Islands (New Zealand) (M) French Polynesia (France) (M)  Baker Island (United States) (M) Jarvis Island (United States) (M) Kingman Reef (United States) (M) Palmyra Atoll (United States) (M) Tokelau (New Zealand) (M)"
+            }, {
+               "north korea",
+               "China South Korea Russia Japan"
+            }, {
+               "south korea",
+               "China (M) Japan (M) North Korea"
+            }, {
+               "kosovo",
+               "Albania (L) Montenegro (L) North Macedonia (L) Serbia (L)"
+            }, {
+               "kuwait",
+               "Iran (M) Iraq Saudi Arabia"
+            }, {
+               "kyrgyzstan",
+               "China (L) Kazakhstan (L) Tajikistan (L) Uzbekistan (L)"
+            }, {
+               "laos",
+               "Myanmar (L) Cambodia (L) China (L) Thailand (L) Vietnam (L)"
+            }, {
+               "latvia",
+               "Belarus (L) Estonia Lithuania Russia (L) Sweden (M)"
+            }, {
+               "lebanon",
+               "Cyprus (M) Israel Syria"
+            }, {
+               "lesotho",
+               "South Africa (L)"
+            }, {
+               "liberia",
+               "Côte d'Ivoire Guinea (L) Sierra Leone"
+            }, {
+               "libya",
+               "Algeria (L) Chad (L) Egypt Greece (M) Italy (M) Malta (M) Niger (L) Sudan (L) Tunisia Turkey (M)"
+            }, {
+               "liechtenstein",
+               "Austria (L) Switzerland (L)"
+            }, {
+               "lithuania",
+               "Belarus (L) Latvia Poland (L) Russia Sweden (M)"
+            }, {
+               "luxembourg",
+               "Belgium (L) France (L) Germany (L)"
+            }, {
+               "macau",
+               "ChinaHong Kong (M)"
+            }, {
+               "madagascar",
+               "Comoros (M) France (M) Mauritius (M) Mozambique (M) Seychelles (M) French Southern and Antarctic Lands (France) (M)"
+            }, {
+               "malawi",
+               "Mozambique (L) Tanzania (L) Zambia (L)"
+            }, {
+               "malaysia",
+               "Brunei China (M) Indonesia Philippines (M) Singapore (M) Thailand Vietnam (M) Taiwan (M)"
+            }, {
+               "maldives",
+               "India (M) Sri Lanka (M) British Indian Ocean Territory (United Kingdom) (M) Mauritius (M)"
+            }, {
+               "mali",
+               "Algeria (L) Burkina Faso (L) Côte d'Ivoire (L) Guinea (L) Mauritania (L) Niger (L) Senegal (L)"
+            }, {
+               "malta",
+               "Italy (M) Libya (M) Tunisia (M)"
+            }, {
+               "marshall islands",
+               "Kiribati (M) Federated States of Micronesia (M) Nauru (M) Wake Island (United States) (M)"
+            }, {
+               "mauritania",
+               "Algeria (L) Cape Verde (M) Mali (L) Senegal Western Sahara Mauritania borders the Western Sahara, which Morocco claims as its territory"
+            }, {
+               "mauritius",
+               "France (M) Madagascar (M) Seychelles (M) French Southern and Antarctic Lands (France) (M) Maldives (M)"
+            }, {
+               "mexico",
+               "Belize Cuba (M) Guatemala Honduras (M) United States"
+            }, {
+               "federated states of micronesia",
+               "Marshall Islands (M) Palau (M) Papua New Guinea (M) Guam (United States) (M)"
+            }, {
+               "midway atoll (united states)",
+               "United States"
+            }, {
+               "moldova",
+               "Romania (L) Ukraine (L)"
+            }, {
+               "monaco",
+               "France"
+            }, {
+               "mongolia",
+               "China (L) Russia (L)"
+            }, {
+               "montenegro",
+               "Albania Bosnia and Herzegovina (L) Croatia Italy (M) Serbia (L) Kosovo (L)"
+            }, {
+               "montserrat (united kingdom)",
+               "Antigua and Barbuda (M) France (M) Saint Kitts and Nevis (M) Venezuela (M)"
+            }, {
+               "morocco",
+               "Algeria Portugal (M) Spain Western Sahara Morocco claims the Western Sahara, which claims independence. The Western Sahara borders Mauritania"
+            }, {
+               "mozambique",
+               "Comoros (M) Eswatini (Swaziland) (L) Madagascar (M) Malawi (L) South Africa Tanzania Zambia (L) Zimbabwe (L) French Southern and Antarctic Lands (France) (M)"
+            }, {
+               "myanmar",
+               "Bangladesh China (L) India Laos (L) Thailand"
+            }, {
+               "namibia",
+               "Angola Botswana (L) South Africa Zambia (L)"
+            }, {
+               "nauru",
+               "Kiribati (M) Marshall Islands (M)"
+            }, {
+               "navassa island (united states/haiti)",
+               "Cuba (M) Haiti (M) Jamaica (M)"
+            }, {
+               "nepal",
+               "India (L) China (L)"
+            }, {
+               "netherlands",
+               "Belgium Germany Saint Kitts and Nevis (M) United Kingdom (M) Venezuela (M) Anguilla (United Kingdom) (M) Curaçao (Netherlands) (M) Saint Barthélemy (France) (M) Saint Martin (France) (M) Sint Maarten (Netherlands) United States Virgin Islands (United States) (M)"
+            }, {
+               "netherlands, ",
+               "Belgium Dominican Republic (M) Germany Saint Kitts and Nevis (M) United Kingdom (M) Venezuela (M) Anguilla (United Kingdom) (M) Saint Barthélemy (France) (M) Saint Martin (France) United States Virgin Islands (United States) (M)"
+            }, {
+               "new caledonia (france)",
+               "Fiji (M) Solomon Islands (M) Vanuatu (M) Coral Sea Islands (Australia) (M) Norfolk Island (Australia) (M)"
+            }, {
+               "new zealand",
+               "Australia (M) Fiji (M) Norfolk Island (Australia) (M)"
+            }, {
+               "new zealand1",
+               "Australia (M) Fiji (M) Kiribati (M) Samoa (M) Tonga (M) American Samoa (United States) (M) French Polynesia (France) (M) Norfolk Island (Australia) (M) Wallis and Futuna (France) (M)"
+            }, {
+               "nicaragua",
+               "Colombia (M) Costa Rica El Salvador (M) Honduras Jamaica (M) Panama (M)"
+            }, {
+               "niger",
+               "Algeria (L) Benin (L) Burkina Faso (L) Chad (L) Libya (L) Mali (L) Nigeria (L)"
+            }, {
+               "nigeria",
+               "Benin Cameroon Chad (L) Equatorial Guinea (M) Niger (L) São Tomé and Príncipe (M)"
+            }, {
+               "niue (new zealand)",
+               "Tonga (M) American Samoa (United States) (M) Cook Islands (New Zealand) (M)"
+            }, {
+               "norfolk island (australia)",
+               "New Zealand (M) New Caledonia (France) (M)"
+            }, {
+               "north macedonia",
+               "Albania (L) Bulgaria (L) Greece (L) Serbia (L) Kosovo (L)"
+            }, {
+               "northern mariana islands (united states)",
+               "Japan (M) Guam (United States) (M)"
+            }, {
+               "norway",
+               "Denmark (M) Finland (L) Russia Sweden United Kingdom (M) Faroe Islands (Denmark) (M) Svalbard (Norway) (M)"
+            }, {
+               "norway, kingdom of ",
+               "Denmark (M) Finland (L) Iceland (M) Russia Sweden United Kingdom (M) Faroe Islands (Denmark) (M) Greenland (Denmark) (M)"
+            }, {
+               "oman",
+               "Iran (M) Pakistan (M) Saudi Arabia (L) United Arab Emirates Yemen"
+            }, {
+               "pakistan",
+               "Afghanistan (L) China (L) India Iran Oman (M)"
+            }, {
+               "palau",
+               "Indonesia (M) Federated States of Micronesia (M) Philippines (M)"
+            }, {
+               "palestine",
+               "Egypt Israel Jordan (L)"
+            }, {
+               "palmyra atoll[11] (united states)",
+               "Kiribati (M) Kingman Reef (United States) (M)"
+            }, {
+               "panama",
+               "Colombia Costa Rica Nicaragua (M)"
+            }, {
+               "papua new guinea",
+               "Australia (M) Indonesia Federated States of Micronesia (M) Solomon Islands (M) Coral Sea Islands (Australia) (M)"
+            }, {
+               "paraguay",
+               "Argentina (L) Bolivia (L) Brazil (L)"
+            }, {
+               "peru",
+               "Bolivia (L) Brazil (L) Chile Colombia (L) Ecuador"
+            }, {
+               "peter i island (norway)",
+               "Chilean Antarctic Territory (Chile) (M)"
+            }, {
+               "philippines",
+               "Brunei (M) China (M) Indonesia (M) Japan (M) Malaysia (M) Palau (M) Vietnam (M) Taiwan (M)"
+            }, {
+               "pitcairn islands (united kingdom)",
+               "French Polynesia (France) (M)"
+            }, {
+               "poland",
+               "Belarus (L) Czech Republic (L) Denmark (M) Germany Lithuania (L) Russia Slovakia (L) Sweden (M) Ukraine (L)"
+            }, {
+               "portugal",
+               "Morocco (M) Spain"
+            }, {
+               "puerto rico",
+               "Dominican Republic (M) Venezuela (M) British Virgin Islands (United Kingdom) (M) United States Virgin Islands (United States) (M)"
+            }, {
+               "qatar",
+               "Bahrain (M) Iran (M) Saudi Arabia United Arab Emirates (M)"
+            }, {
+               "queen maud land (norway)",
+               "Australian Antarctic Territory (Australia) British Antarctic Territory (United Kingdom)"
+            }, {
+               "romania",
+               "Bulgaria Hungary (L) Moldova (L) Russia (M) Serbia (L) Ukraine"
+            }, {
+               "ross dependency (new zealand)",
+               "Australian Antarctic Territory (Australia)"
+            }, {
+               "russia",
+               "Azerbaijan Belarus (L) Bulgaria (M) China (L) Estonia Finland Georgia Japan (M) Kazakhstan North Korea Latvia (L) Lithuania Mongolia (L) Norway Poland Romania (M) Sweden (M) Turkey (M) Ukraine United States (M) Svalbard (Norway) (M)"
+            }, {
+               "rwanda",
+               "Burundi (L) Democratic Republic of the Congo (L) Tanzania (L) Uganda (L)"
+            }, {
+               "saint barthélemy (france)",
+               "Antigua and Barbuda (M) Netherlands (M) Saint Kitts and Nevis (M) Anguilla (United Kingdom) (M) Saint Martin (France) (M) Sint Maarten (Netherlands) (M)"
+            }, {
+               "saint helena, ascension and tristan da cunha (united kingdom)",
+               "None"
+            }, {
+               "saint kitts and nevis",
+               "Antigua and Barbuda (M) Netherlands (M) Venezuela (M) Montserrat (United Kingdom) (M) Saint Barthélemy (France) (M)"
+            }, {
+               "saint lucia",
+               "Barbados (M) France (M) Saint Vincent and the Grenadines (M) Venezuela (M)"
+            }, {
+               "saint martin (france)",
+               "Netherlands (M) Anguilla (United Kingdom) (M) Saint Barthélemy (France) (M) Sint Maarten (Netherlands)"
+            }, {
+               "saint pierre and miquelon (france)",
+               "Canada (M)"
+            }, {
+               "saint vincent and the grenadines",
+               "Barbados (M) Grenada (M) Saint Lucia (M) Trinidad and Tobago (M) Venezuela (M)"
+            }, {
+               "samoa",
+               "Tonga (M) American Samoa (United States) (M) Tokelau (New Zealand) (M) Wallis and Futuna (France) (M)"
+            }, {
+               "san marino",
+               "Italy (L)"
+            }, {
+               "são tomé and príncipe",
+               "Equatorial Guinea (M) Gabon (M) Nigeria (M)"
+            }, {
+               "saudi arabia",
+               "Bahrain (M) Egypt (M) Eritrea (M) Iran (M) Iraq (L) Jordan Kuwait Oman (L) Qatar Sudan (M) United Arab Emirates Yemen"
+            }, {
+               "senegal",
+               "Cape Verde (M) The Gambia Guinea (L) Guinea-Bissau Mali (L) Mauritania"
+            }, {
+               "serbia",
+               "Bosnia and Herzegovina (L) Bulgaria (L) Croatia (L) Hungary (L) Montenegro (L) North Macedonia (L) Romania (L) Kosovo (L) Kosovo, which some countries consider part of Serbia, borders Albania"
+            }, {
+               "seychelles",
+               "Comoros (M) Madagascar (M) Mauritius (M) Tanzania (M) French Southern and Antarctic Lands (France) (M)"
+            }, {
+               "sierra leone",
+               "Guinea Liberia"
+            }, {
+               "singapore",
+               "Indonesia (M) Malaysia (M)"
+            }, {
+               "sint maarten (netherlands)",
+               "Netherlands (M) Saint Barthélemy (France) (M) Saint Martin (France)"
+            }, {
+               "slovakia",
+               "Austria (L) Czech Republic (L) Hungary (L) Poland (L) Ukraine (L)"
+            }, {
+               "slovenia",
+               "Austria (L) Croatia Italy Hungary (L)"
+            }, {
+               "solomon islands",
+               "Fiji (M) Papua New Guinea (M) Vanuatu (M) Coral Sea Islands (Australia) (M) New Caledonia (France) (M)"
+            }, {
+               "somalia",
+               "Djibouti Ethiopia (L) Kenya Yemen (M) Somaliland, which considers itself independent, is the only part of Somalia to border Djibouti"
+            }, {
+               "somaliland",
+               "Djibouti Ethiopia (L) Somalia Yemen (M)"
+            }, {
+               "south africa",
+               "Botswana (L) Eswatini (Swaziland) (L) Lesotho (L) Mozambique Namibia Zimbabwe (L)"
+            }, {
+               "south georgia and the south sandwich islands (united kingdom)",
+               "None"
+            }, {
+               "south ossetia",
+               "Georgia (L) Russia (L)"
+            }, {
+               "south sudan",
+               "Central African Republic (L) Democratic Republic of the Congo (L) Ethiopia (L) Kenya (L) Sudan (L) Uganda (L)"
+            }, {
+               "spain",
+               "Algeria (M) Andorra (L) France Italy (M) Morocco Portugal Gibraltar (United Kingdom) Western Sahara (M)"
+            }, {
+               "sri lanka",
+               "India (M) Maldives (M)"
+            }, {
+               "sudan",
+               "Central African Republic (L) Chad (L) Egypt Eritrea Ethiopia (L) Libya (L) Saudi Arabia (M) South Sudan (L)"
+            }, {
+               "suriname",
+               "Brazil (L) France Guyana"
+            }, {
+               "svalbard (norway)",
+               "Norway (M) Russia (M) Greenland (Denmark) (M)"
+            }, {
+               "sweden",
+               "Denmark (M) Estonia (M) Finland Germany (M) Latvia (M) Lithuania (M) Norway Poland (M) Russia (M)"
+            }, {
+               "switzerland",
+               "Austria (L) France (L) Italy (L) Liechtenstein (L) Germany (L)"
+            }, {
+               "syria",
+               "Cyprus (M) Iraq (L) Israel (L) Jordan (L) Lebanon Turkey Northern Cyprus (M)"
+            }, {
+               "republic of china",
+               "Brunei (M) China (M) Indonesia (M) Japan (M) Malaysia (M) Philippines (M) Vietnam (M)"
+            }, {
+               "tajikistan",
+               "Afghanistan (L) China (L) Kyrgyzstan (L) Uzbekistan (L)"
+            }, {
+               "tanzania",
+               "Burundi (L) Comoros (M) Democratic Republic of the Congo (L) Kenya Malawi (L) Mozambique Rwanda (L) Seychelles (M) Uganda (L) Zambia (L)"
+            }, {
+               "thailand",
+               "Myanmar Cambodia India (M) Indonesia (M) Laos (L) Malaysia Vietnam (M)"
+            }, {
+               "togo",
+               "Benin Burkina Faso (L) Ghana"
+            }, {
+               "tokelau (new zealand)",
+               "Kiribati (M) Samoa (M) American Samoa (United States) (M) Cook Islands (New Zealand) (M) Wallis and Futuna (France) (M)"
+            }, {
+               "tonga",
+               "Fiji (M) Samoa (M) American Samoa (United States) (M) Niue (New Zealand) (M) Wallis and Futuna (France) (M)"
+            }, {
+               "transnistria",
+               "Moldova (L) Ukraine (L)"
+            }, {
+               "trinidad and tobago",
+               "Barbados (M) Grenada (M) Guyana (M) Saint Vincent and the Grenadines (M) Venezuela (M)"
+            }, {
+               "tunisia",
+               "Algeria Italy (M) Libya Malta (M)"
+            }, {
+               "turkey",
+               "Armenia (L) Azerbaijan (L) Bulgaria Cyprus (M) Egypt (M) Georgia Greece Iran (L) Iraq (L) Russia (M) Syria Ukraine (M) Libya (M) Northern Cyprus (M)"
+            }, {
+               "turkmenistan",
+               "Afghanistan (L) Azerbaijan (M) Iran Kazakhstan Uzbekistan (L)"
+            }, {
+               "turks and caicos islands (united kingdom)",
+               "Bahamas (M) Dominican Republic (M) Haiti (M)"
+            }, {
+               "tuvalu",
+               "Fiji (M) Kiribati (M) Wallis and Futuna (France) (M)"
+            }, {
+               "uganda",
+               "Democratic Republic of the Congo (L) Kenya (L) Rwanda (L) South Sudan (L) Tanzania (L)"
+            }, {
+               "ukraine",
+               "Belarus (L) Bulgaria (M) Hungary (L) Moldova (L) Poland (L) Romania Russia Slovakia (L) Turkey (M)"
+            }, {
+               "united arab emirates",
+               "Iran (M) Oman Qatar (M) Saudi Arabia"
+            }, {
+               "united kingdom",
+               "Belgium (M) Denmark (M) France (M) Germany (M) Ireland Netherlands (M) Norway (M) Spain Faroe Islands (Denmark) (M) Guernsey (United Kingdom) (M) Isle of Man (United Kingdom) (M)"
+            }, {
+               "united kingdom1",
+               "Antigua and Barbuda (M) Argentina (M) Bahamas (M) Belgium (M) Cuba (M) Cyprus Denmark (M) Dominican Republic (M) France (M) Germany (M) Haiti (M) Honduras (M) Ireland Jamaica (M) Maldives (M) Netherlands (M) Norway (M) Saint Kitts and Nevis (M) Spain Venezuela (M) Faroe Islands (Denmark) (M) French Polynesia (France) (M) Puerto Rico (United States) (M) Saint Barthélemy (France) (M) Saint Martin (France) (M) United States Virgin Islands (United States) (M)"
+            }, {
+               "united states (excluding insular areas)",
+               "Bahamas (M) Canada Cuba (M) Mexico Russia (M) Midway Atoll (United States) (M)"
+            }, {
+               "united states",
+               "Bahamas (M) Canada Cuba (M) Dominican Republic (M) Haiti (M) Jamaica (M) Japan (M) Kiribati (M) Marshall Islands (M) Mexico Federated States of Micronesia (M) Netherlands (M) Russia (M) Samoa (M) Tonga (M) Venezuela (M) Anguilla (United Kingdom) (M) British Virgin Islands (United Kingdom) (M) Cook Islands (New Zealand) (M) Niue (New Zealand) (M) Tokelau (New Zealand) (M)"
+            }, {
+               "united states virgin islands (united states)",
+               "Netherlands (M) Venezuela (M) Anguilla (United Kingdom) (M) British Virgin Islands (United Kingdom) (M) Puerto Rico (United States) (M)"
+            }, {
+               "uruguay",
+               "Argentina Brazil"
+            }, {
+               "uzbekistan",
+               "Afghanistan (L) Kazakhstan (L) Kyrgyzstan (L) Tajikistan (L) Turkmenistan (L)"
+            }, {
+               "vanuatu",
+               "Fiji (M) Solomon Islands (M) New Caledonia (France) (M)"
+            }, {
+               "vatican city",
+               "Italy (L)"
+            }, {
+               "venezuela",
+               "Barbados (M) Brazil (L) Colombia Dominica (M) Dominican Republic (M) France (M) Grenada (M) Guyana Netherlands (M) Saint Kitts and Nevis (M) Saint Lucia (M) Saint Vincent and the Grenadines (M) Trinidad and Tobago (M) Aruba (Netherlands) (M) Curaçao (Netherlands) (M) Montserrat (United Kingdom) (M) Puerto Rico (United States) (M) United States Virgin Islands (United States) (M)"
+            }, {
+               "vietnam",
+               "Brunei (M) Cambodia China Indonesia (M) Laos (L) Malaysia (M) Philippines (M) Taiwan (M) Thailand (M)"
+            }, {
+               "wake island (united states)",
+               "Marshall Islands (M)"
+            }, {
+               "wallis and futuna (france)",
+               "Fiji (M) Samoa (M) Tonga (M) Tuvalu (M) Tokelau (New Zealand) (M)"
+            }, {
+               "western sahara",
+               "Algeria (L) Mauritania Morocco Spain (M)"
+            }, {
+               "yemen",
+               "Djibouti (M) Eritrea (M) Oman Saudi Arabia Somalia (M)"
+            }, {
+               "zambia",
+               "Angola (L) Botswana (L) Democratic Republic of the Congo (L) Malawi (L) Mozambique (L) Namibia (L) Tanzania (L) Zimbabwe (L)"
+            }, {
+               "zimbabwe",
+               "Botswana (L) Mozambique (L) South Africa (L) Zambia (L)"
+            }
+
+         };
+
+            Console.WriteLine("Enter the country namespace:");
+            string country = Console.ReadLine();
+            country = country.ToLower();
+            if (countries.ContainsKey(country))
+            {
+                Console.WriteLine("The neighbouring countries of are \n");
+                Console.WriteLine(countries[country]);
+            }
+            else
+            {
+                Console.WriteLine("Please Try again");
+            }
+        }
+    }
+}

@@ -1,0 +1,18 @@
+
+@model AssetManagement.Models.Book
+<h1>SearchBook</h1>
+@using (Html.BeginForm())
+{
+    @Html.ValidationSummary(true)
+    <fieldset>
+        <div class="editor-label">
+            @Html.LabelFor(model => model.id)
+        </div>
+        <div class="editor-label">
+            @Html.EditorFor(model => model.id)
+            @Html.ValidationMessageFor(model => model.id, "", new { @class = "text-danger" })
+        </div>
+        <br />
+        <input type="submit" class="btn btn-primary" value="Search" />
+    </fieldset>
+}

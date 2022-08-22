@@ -1,0 +1,43 @@
+﻿@model DbAssetManagement.Models.SoftwareLicense
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h1>Delete</h1>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Software</h4>
+    <form asp-action="Delete">
+
+        <div class="form-group">
+            <label asp-for="SerialNo" class="control-label"></label>
+            <input asp-for="SerialNo" class="form-control" readonly />
+            <span asp-validation-for="SerialNo" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="SoftwareName" class="control-label"></label>
+            <input asp-for="SoftwareName" class="form-control" readonly />
+            <span asp-validation-for="SoftwareName" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DateOfPublish" class="control-label"></label>
+            <input asp-for="DateOfPublish" class="form-control" readonly />
+            <span asp-validation-for="DateOfPublish" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="DateOfExpiry" class="control-label"></label>
+            <input asp-for="DateOfExpiry" class="form-control" readonly />
+            <span asp-validation-for="DateOfExpiry" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Price" class="control-label"></label>
+            <input asp-for="Price" class="form-control" readonly />
+            <span asp-validation-for="Price" class="text-danger"></span>
+        </div>
+
+        <input type="submit" value="ConfirmDelete" class="btn btn-danger" /> |
+        <a asp-action="Index">Back to List</a>
+    </form>
+</div>

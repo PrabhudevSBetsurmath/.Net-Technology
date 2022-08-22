@@ -1,0 +1,2 @@
+What is Securitystamp in asp net identity?
+The security stamp is a Guid stored in the database against the user. It gets updated when certain actions take place within the Identity UserManager class and provides a way to invalidate old tokens when an account has changed.
